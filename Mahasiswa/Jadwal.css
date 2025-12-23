@@ -1,0 +1,127 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdf6f6; /* lebih lembut agar cocok dengan nuansa merah */
+}
+
+/* ====== KONTEN UTAMA ====== */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: #fff9f9;
+  min-height: 100vh;
+  margin-left: 250px; /* tetap agar konten tidak ketutup sidebar */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+header h3 {
+  color: #c62828; /* merah Telkom */
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+header small {
+  color: #6c757d;
+}
+
+/* ====== BUTTON SEMESTER ====== */
+.btn-semester {
+  background: linear-gradient(135deg, #b71c1c, #e53935);
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-weight: 500;
+  box-shadow: 0 3px 10px rgba(183, 28, 28, 0.25);
+  transition: all 0.3s ease;
+}
+
+.btn-semester:hover {
+  background: linear-gradient(135deg, #7f0000, #c62828);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(183, 28, 28, 0.35);
+}
+
+/* ====== CARD JADWAL ====== */
+.jadwal-container {
+  background-color: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.jadwal-container:hover {
+  box-shadow: 0 6px 30px rgba(183, 28, 28, 0.15);
+}
+
+/* ====== TABEL ====== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+thead {
+  background: linear-gradient(135deg, #ffebee, #ffcdd2);
+  color: #b71c1c;
+}
+
+th, td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #f1d7d7;
+}
+
+th {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+tbody tr:hover {
+  background-color: #fff2f2;
+  transition: background 0.3s ease;
+}
+
+/* Kolom teks panjang (seperti ruang kuliah) */
+td:nth-child(5) {
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ====== NO DATA ====== */
+.no-data {
+  text-align: center;
+  padding: 2rem;
+  color: #6c757d;
+  background: #fff;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 992px) {
+  .main-content {
+    padding: 1rem;
+    margin-left: 0;
+  }
+
+  th, td {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  header h3 {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,93 @@
+body {
+  background-color: #fdf6f6;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #b71c1c, #e53935);
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 25px 0;
+  text-align: center;
+}
+
+.sidebar .logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.sidebar h4 {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.sidebar .nav-link {
+  color: #ffeaea;
+  font-weight: 500;
+  padding: 10px 20px;
+  margin: 6px 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.sidebar .nav-link i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.sidebar .nav-link.active,
+.sidebar .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+/* Content */
+.content {
+  margin-left: 270px;
+  padding: 30px;
+  background-color: #fdf6f6;
+  min-height: 100vh;
+}
+
+.table th {
+  background-color: #d32f2f !important;
+  color: white !important; /* <--- DIUBAH DI SINI */
+}
+
+.btn-add {
+  background: linear-gradient(135deg, #b71c1c, #e53935);
+  color: white;
+}
+
+.btn-add:hover {
+  background: linear-gradient(135deg, #7f0000, #b71c1c);
+}
+
+.modal-header {
+  background: #c62828;
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+}

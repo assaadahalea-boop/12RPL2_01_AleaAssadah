@@ -1,0 +1,147 @@
+/* ===== Sidebar Mahasiswa - TelesandiKu (Elegant Telkom Red Theme) ===== */
+.sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #b71c1c 0%, #c62828 60%, #d32f2f 100%);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 20px;
+  box-shadow: 4px 0 25px rgba(0, 0, 0, 0.15);
+  border-right: 2px solid rgba(255, 255, 255, 0.1);
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Avatar */
+.avatar-wrap {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 -6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  background: #ffeaea;
+}
+
+/* Judul (kalau mau tambah nama pengguna) */
+.sidebar h5 {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+/* ===== Navigation links ===== */
+.sidebar .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 6px 0;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.sidebar .nav-link i {
+  font-size: 1.2rem;
+  width: 25px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.sidebar .nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transform: translateX(5px);
+}
+
+/* Active state */
+.sidebar .nav-link.active {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: inset 3px 0 0 #ffccbc;
+}
+
+.sidebar .nav-link.active i {
+  color: #ffccbc;
+}
+
+/* Divider */
+.sidebar hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin: 15px 0;
+}
+
+/* Logout button */
+.logout {
+  margin-top: auto;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.logout:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateX(4px);
+}
+
+/* ===== Responsive Layout ===== */
+@media (max-width: 992px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 18px;
+    border-right: none;
+  }
+
+  .avatar-wrap {
+    width: 90px;
+    height: 90px;
+  }
+
+  .avatar {
+    width: 70px;
+    height: 70px;
+  }
+
+  .sidebar .nav-link {
+    padding: 8px 10px;
+    font-size: 0.95rem;
+  }
+
+  .logout {
+    font-size: 0.95rem;
+  }
+}
